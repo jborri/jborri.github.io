@@ -12,7 +12,7 @@
         }
 
         function draw() {
-            background(0, 20, 16);
+            background(0, 10, 10);
           
             noFill();
             strokeWeight(6)
