@@ -1,5 +1,5 @@
         let circleX, circleY, squareX, squareY;
-        let circleRadius = 100;
+        let circleRadius = 120;
 
         function setup() {
             let container = document.getElementById('abstract');
@@ -36,7 +36,7 @@
             mouseIntensity = constrain(mouseIntensity, 0, 1);
             
             // Base pulsing animation
-            let pulse = sin(frameCount * 0.12) * 0.3 + 1.7;
+            let pulse = sin(frameCount * 0.08) * 0.3 + 1.2;
             
             // Combine pulse with mouse proximity
             let finalIntensity = pulse * (0.3 + mouseIntensity * .7);
@@ -72,7 +72,7 @@
             
             // Outer color (darker edge)
             gradient.addColorStop(0.7, `rgba(18, 212, 124, ${intensity * 0.6})`);
-            gradient.addColorStop(1, `rgba(10, 150, 80, ${intensity * 0.4})`);
+            gradient.addColorStop(1, `rgba(10, 150, 80, ${intensity * 0.1})`);
             
             // Apply gradient and draw
             drawingContext.fillStyle = gradient;
