@@ -32,11 +32,11 @@
             // Map distance to glow intensity (closer = brighter)
             // When mouse is at center (d=0), intensity is maximum
             // When mouse is far away (d>300), intensity is minimum
-            let mouseIntensity = map(d, 0, 300, 1, 0.5);
+            let mouseIntensity = map(d, 0, 150, 1, 0.5);
             mouseIntensity = constrain(mouseIntensity, 0, 1);
             
             // Base pulsing animation
-            let pulse = sin(frameCount * 0.05) * 0.3 + 1.7;
+            let pulse = sin(frameCount * 0.12) * 0.3 + 1.7;
             
             // Combine pulse with mouse proximity
             let finalIntensity = pulse * (0.3 + mouseIntensity * .7);
