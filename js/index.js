@@ -1,6 +1,9 @@
 const lotusImage = document.getElementById("lotus");
 const lotusModal = document.getElementById("lotus-modal");
 const closeLotus = document.getElementById("close-lotus");
+const resumeModal = document.getElementById("resume-modal");
+const resumeLink = document.getElementById("resume");
+const closeResume = document.getElementById("close-resume");
 
 // Open the modal when the lotus image is clicked
 lotusImage.addEventListener("click", () => {
@@ -18,6 +21,16 @@ window.addEventListener("click", (event) => {
     lotusModal.classList.add("hidden");
   }
 });
+  // Close the menu if clicked outside?
+  document.addEventListener("click", (event) => {
+    if (
+      !lotusModal.contains(event.target) && !lotusImage.contains(event.target)
+    ) {
+      lotusModal.classList.add("hidden");
+      console.log("closed");
+    }
+});
+
 
 let caustics = [];
 let time = 0;
@@ -117,4 +130,28 @@ function windowResized() {
         if (caustic.x > width) caustic.x = width;
         if (caustic.y > height) caustic.y = height;
     }
-}
+};
+
+// Open the resume modal when the resume link is clicked
+resumeLink.addEventListener("click", () => {
+  resumeModal.classList.remove("hidden");
+  console.log("opened");
+});
+
+// // Close the resume modal when the close button is clicked
+
+// closeResume.addEventListener("click", () => {
+//   resumeModal.classList.add("hidden");
+// });
+
+
+  // Close the menu if clicked outside?
+  document.addEventListener("click", (event) => {
+    if (
+      !resumeModal.contains(event.target) && !resumeLink.contains(event.target)
+    ) {
+      resumeModal.classList.add("hidden");
+      console.log("closed");
+    }
+});
+
