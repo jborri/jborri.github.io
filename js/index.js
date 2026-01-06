@@ -4,20 +4,16 @@ const closeLotus = document.getElementById("close-lotus");
 const resumeModal = document.getElementById("resume-modal");
 const resumeLink = document.getElementById("resume");
 const closeResume = document.getElementById("close-resume");
+const artworkModal = document.getElementById("artwork-modal");
+const artworkLink = document.getElementById("artwork");
+const aboutModal = document.getElementById("about-modal");
+const aboutLink = document.getElementById("about");
+const closeAbout = document.getElementById("close-about");
 
-// Open the modal when the lotus image is clicked
-lotusImage.addEventListener("click", () => {
-  lotusModal.classList.remove("hidden");
-});
-
-// Close the modal when the close button is clicked
-closeLotus.addEventListener("click", () => {
-  lotusModal.classList.add("hidden");
-});
 
 // Close the modal when clicking outside the modal content
 window.addEventListener("click", (event) => {
-  if (event.target === lotusModal) {
+  if (event.target === closeLotus) {
     lotusModal.classList.add("hidden");
   }
 });
@@ -155,3 +151,33 @@ resumeLink.addEventListener("click", () => {
     }
 });
 
+// Open the modal when the artwork link is clicked
+artworkLink.addEventListener("click", () => {
+  artworkModal.classList.remove("hidden");
+});
+
+
+// Open the modal when the lotus image is clicked
+lotusImage.addEventListener("click", () => {
+  lotusModal.classList.remove("hidden");
+});
+
+  // Close the menu if clicked outside?
+  document.addEventListener("click", (event) => {
+    if (
+      !artworkModal.contains(event.target) && !artworkLink.contains(event.target)
+    ) {
+      artworkModal.classList.add("hidden");
+      console.log("closed");
+    }
+});
+
+// // Open the modal when the about link is clicked
+aboutLink.addEventListener("click", () => {
+  aboutModal.classList.remove("hidden");
+});
+
+// Close the modal when the close button is clicked
+closeAbout.addEventListener("click", () => {
+  aboutModal.classList.add("hidden");
+});

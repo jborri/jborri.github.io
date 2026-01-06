@@ -20,7 +20,7 @@
         
         <nav>
             <div class="nav-section">
-                <div class="nav-title">ABOUT</div>
+                <div class="nav-title"><a href="#" id="about">ABOUT</a></div>
                 <div class="nav-content">
                     <p>Designer / developer based in [Brooklyn].</p>
                     <br>
@@ -33,8 +33,8 @@
                 <div class="nav-content">
                     <ul>
                         <li><a href="#" id="lotus">Project One</a></li>
-                        <li><a href="#">Artwork</a></li>
-                        <li><a href="#">Poetry</a></li>
+                        <li><a href="#" id="artwork">Artwork</a></li>
+                        <li><a href="#" id="poetry">Poetry</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,13 +58,42 @@
     </aside>
     
     <main class="main-content">
-        <div class="image-grid">
+
+        <div class="glass-panel" id="about-modal">
+            <h2 class="project-title">Project Title</h2>
+            <a href="#" id="close-about">&times;</a>
+
+            
+            <div class="project-status">WIP</div>
+            
+            
+            <div class="project-link">
+                <a href="#">Link Name</a>
+            </div>
+            
+            <div class="project-description">
+                <p><em>A few days ago, something happened.</em></p>
+                <p><em>I set out on a journey.</em></p>
+                <p><em>To find what I saw.</em></p>
+            </div>
+            
+            <div class="project-description">
+                <p>A longer description of your project. Explain the concept, the story, or the purpose behind the work. This section can contain multiple paragraphs to fully describe your creative vision.</p>
+            </div>
+            
+            <div class="project-description">
+                <p>Additional context or details in another language if needed.</p>
+            </div>
+        </div>
+
+
+        <div class="image-grid hidden" id="artwork-modal">
             <div class="image-placeholder">Image 1</div>
             <div class="image-placeholder">Image 2</div>
-            <!-- <div class="image-placeholder">Image 3</div>
+            <div class="image-placeholder">Image 3</div>
             <div class="image-placeholder">Image 4</div>
             <div class="image-placeholder">Image 5</div>
-            <div class="image-placeholder">Image 6</div> -->
+            <div class="image-placeholder">Image 6</div>
         </div>
         
         <div class="glass-panel hidden" id="lotus-modal">
