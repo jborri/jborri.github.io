@@ -109,13 +109,13 @@ function setGradient(x, y, w, h) {
     }
     
     // Add subtle green gradient overlay
-    for (let i = 0; i <= h; i++) {
-        let inter = map(i, 0, h, 0, 1);
-        let alpha = map(inter, 0, 1, 40, 10);
-        let c = color(200, 230, 220, alpha);
-        stroke(c);
-        line(x, y + i, x + w, y + i);
-    }
+    // for (let i = 0; i <= h; i++) {
+    //     let inter = map(i, 0, h, 0, 1);
+    //     let alpha = map(inter, 0, 1, 40, 10);
+    //     let c = color(200, 230, 220, alpha);
+    //     stroke(c);
+    //     line(x, y + i, x + w, y + i);
+    // }
 }
 
 function windowResized() {
