@@ -280,8 +280,7 @@ function buildProjectList() {
 
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      const isNarrow = window.matchMedia("(max-width: 900px)").matches;
-      selectProject(index, { updateHistory: true, scrollPreview: isNarrow });
+      selectProject(index, { updateHistory: true, scrollPreview: true });
     });
 
     link.addEventListener("pointerenter", () => setLensState(index));
