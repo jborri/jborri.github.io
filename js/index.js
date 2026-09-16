@@ -4,76 +4,10 @@ const portfolioData = {
   },
   projects: [
     {
-      id: "interactive-data-visualization",
-      number: "01",
-      title: "Interactive Data Visualization",
-      shortTitle: "Interactive Data Visualization",
-      resumeTracks: "Data Visualization",
-      question: "How can multiple public datasets become clear, explorable visual stories?",
-      toolsLine: "Observable · D3 · Geospatial data",
-      tags: ["Observable Framework", "Observable Plot", "D3.js", "JavaScript", "Geospatial data"],
-      overview: "A collection of interactive analytical stories covering city elections, water quality, transit staffing, and pollinator behavior.",
-      approach: "Built responsive maps and comparative views with tooltips, annotations, temporal and categorical comparisons, and narrative structure.",
-      output: "Published as a GitHub Pages site containing multiple interactive data stories.",
-      limitations: "Each story is scoped to its source data and should be interpreted within the provenance and coverage documented in the project.",
-      liveUrl: "https://jborri.github.io/Interactive-Data-Vis-Fall2025/",
-      repositoryUrl: "https://github.com/jborri/Interactive-Data-Vis-Fall2025"
-    },
-    {
-      id: "community-indicators",
-      number: "02",
-      title: "Community Indicators",
-      shortTitle: "Community Indicators",
-      resumeTracks: "Data Analysis · Data Visualization · Computational Biology",
-      question: "How do social, health, economic, and governance indicators relate to reported social support?",
-      toolsLine: "Python · Regression · Tableau",
-      tags: ["Python", "pandas", "OLS", "Logistic regression", "Tableau"],
-      overview: "An exploratory cross-national analysis combining social, health, economic, and governance indicators from multiple sources.",
-      approach: "Cleaned and merged the datasets in Python, then used OLS and logistic regression to examine associations with reported social support.",
-      output: "An exploratory Tableau dashboard supported by documented data provenance and analytical interpretation.",
-      limitations: "The results describe associations rather than causal effects and remain sensitive to source coverage, measurement choices, and missing data.",
-      liveUrl: "https://public.tableau.com/app/profile/joseph.borri/viz/CommunityIndicators_17224364594760/Dashboard1?publish=yes",
-      repositoryUrl: "https://github.com/jborri/Community-Indicators"
-    },
-    {
-      id: "genetic-variant-analysis",
-      number: "03",
-      title: "Genetic Variant Analysis",
-      shortTitle: "Genetic Variant Analysis",
-      resumeTracks: "Data Analysis · Computational Biology",
-      question: "What can small biological datasets support—and where does prediction become unreliable?",
-      toolsLine: "Python · scikit-learn · PhyloTree",
-      tags: ["Python", "pandas", "scikit-learn", "UniProt", "PhyloTree"],
-      overview: "Two exploratory biological-data workflows: mitochondrial haplogroup lookup and classification experiments using human insulin variant records.",
-      approach: "Implemented mutation-based lookup and compared random-forest experiments using bootstrap estimates, cross-validation, and grid search.",
-      output: "A reproducible repository containing the lookup workflow, preprocessing, exploratory models, and supporting documentation.",
-      limitations: "Missing labels, class imbalance, and small samples limit predictive interpretation; the classification work is presented as an experiment rather than a validated clinical model.",
-      liveUrl: null,
-      repositoryUrl: "https://github.com/jborri/Mitochondrial-Haplogroup-Mutations"
-    },
-    {
-      id: "bestseller-trends-d3",
-      number: "04",
-      title: "Bestseller Trends with D3",
-      shortTitle: "Bestseller Trends",
-      resumeTracks: "Data Visualization",
-      question: "How have bestseller genres, authorship, page counts, and ratings changed across decades?",
-      toolsLine: "D3.js · JavaScript · SVG",
-      tags: ["D3.js", "JavaScript", "HTML", "CSS", "SVG"],
-      overview: "An interactive exploration of Publishers Weekly, Goodreads, and Wikipedia metadata describing bestselling books across decades.",
-      approach: "Combined publishing metadata and built D3 views for genre distribution, authorship, page counts, ratings, and change over time.",
-      output: "A repository containing interactive visualizations and the data-processing work supporting them.",
-      limitations: "The analysis reflects the coverage and matching quality of the source datasets and should not be treated as a complete history of publishing.",
-      liveUrl: null,
-      repositoryUrl: "https://github.com/jborri/D3_S24"
-    }
-  ],
-  indexProjects: [
-    {
       id: "mayoral-mystery",
       number: "01",
       title: "Mayoral Mystery",
-      resumeTracks: "Data Visualization",
+      discipline: "Data Visualization",
       question: "What do election results, survey responses, campaign events, and district geography suggest about a future NYC campaign?",
       toolsLine: "Observable Plot · JavaScript · Geospatial data",
       tags: ["Observable Framework", "Observable Plot", "JavaScript", "GeoJSON", "Campaign analysis"],
@@ -88,7 +22,7 @@ const portfolioData = {
       id: "clearwater-crisis",
       number: "02",
       title: "Clearwater Crisis",
-      resumeTracks: "Data Visualization",
+      discipline: "Data Visualization",
       question: "What does the temporal and spatial evidence suggest about a fictional ecological decline?",
       toolsLine: "Observable Plot · JavaScript · Environmental data",
       tags: ["Observable Framework", "Observable Plot", "JavaScript", "Geospatial data", "Environmental analysis"],
@@ -103,7 +37,7 @@ const portfolioData = {
       id: "subway-staffing",
       number: "03",
       title: "Subway Staffing",
-      resumeTracks: "Data Visualization",
+      discipline: "Data Visualization",
       question: "Which stations should receive additional staffing for upcoming events?",
       toolsLine: "Observable Plot · JavaScript · Operations data",
       tags: ["Observable Framework", "Observable Plot", "JavaScript", "Operations analysis", "Dashboard design"],
@@ -118,7 +52,7 @@ const portfolioData = {
       id: "prolific-pollinators",
       number: "04",
       title: "Prolific Pollinators",
-      resumeTracks: "Data Visualization",
+      discipline: "Data Visualization",
       question: "How do morphology and weather relate to pollinator visits and nectar production?",
       toolsLine: "Observable Plot · JavaScript · Biological data",
       tags: ["Observable Framework", "Observable Plot", "JavaScript", "Biological data", "Exploratory analysis"],
@@ -133,7 +67,7 @@ const portfolioData = {
       id: "bestseller-trends-d3",
       number: "05",
       title: "Bestseller Trends with D3",
-      resumeTracks: "Data Visualization",
+      discipline: "Data Visualization",
       question: "How have bestseller genres, authorship, page counts, and ratings changed across decades?",
       toolsLine: "D3.js · JavaScript · SVG",
       tags: ["D3.js", "JavaScript", "HTML", "CSS", "SVG"],
@@ -148,7 +82,7 @@ const portfolioData = {
       id: "community-indicators",
       number: "06",
       title: "Community Indicators",
-      resumeTracks: "Data Analysis · Data Visualization · Computational Biology",
+      discipline: "Data Analysis · Visualization",
       question: "How do social, health, economic, and governance indicators relate to reported social support?",
       toolsLine: "Python · Regression · Tableau",
       tags: ["Python", "pandas", "OLS", "Logistic regression", "Tableau"],
@@ -163,7 +97,7 @@ const portfolioData = {
       id: "mitochondrial-haplogroup-lookup",
       number: "07",
       title: "Mitochondrial Haplogroup U Lookup",
-      resumeTracks: "Data Analysis · Computational Biology",
+      discipline: "Computational Biology",
       question: "How can an entered mutation set be matched against defining PhyloTree haplogroup U mutations?",
       toolsLine: "Python · CSV · PhyloTree",
       tags: ["Python", "CSV", "PhyloTree", "Mitochondrial DNA", "Variant lookup"],
@@ -178,7 +112,7 @@ const portfolioData = {
       id: "ins-variant-classification",
       number: "08",
       title: "Human INS Variant Classification",
-      resumeTracks: "Data Analysis · Computational Biology",
+      discipline: "Computational Biology",
       question: "What can a small set of human insulin variant records support in an exploratory classification workflow?",
       toolsLine: "Python · scikit-learn · UniProt",
       tags: ["Python", "pandas", "scikit-learn", "UniProt", "Random forest"],
@@ -197,18 +131,24 @@ const portfolioData = {
   }
 };
 
-const views = [...document.querySelectorAll("[data-view]")];
-const routeLinks = [...document.querySelectorAll("[data-route-link]")];
+const lensStates = [
+  { x: "29%", y: "22%", glow: "0.34", driftX: "-3%", driftY: "2%" },
+  { x: "66%", y: "30%", glow: "0.27", driftX: "4%", driftY: "-2%" },
+  { x: "42%", y: "72%", glow: "0.31", driftX: "1%", driftY: "4%" },
+  { x: "73%", y: "64%", glow: "0.38", driftX: "-4%", driftY: "-1%" },
+  { x: "31%", y: "58%", glow: "0.24", driftX: "3%", driftY: "3%" },
+  { x: "58%", y: "24%", glow: "0.35", driftX: "-2%", driftY: "-4%" },
+  { x: "38%", y: "40%", glow: "0.3", driftX: "5%", driftY: "1%" },
+  { x: "69%", y: "48%", glow: "0.4", driftX: "-5%", driftY: "3%" }
+];
+
+const projectList = document.querySelector("[data-project-list]");
+const projectPreview = document.querySelector("[data-project-preview]");
+const lens = document.querySelector("[data-lens]");
 const sectionReadout = document.querySelector("#current-section");
-const projectOrb = document.querySelector("#project-orb");
-const projectIndexDialog = document.querySelector("#project-index-dialog");
-const indexTrigger = document.querySelector("[data-open-index]");
-const indexList = document.querySelector("[data-project-index-list]");
+const sectionLinks = [...document.querySelectorAll("[data-section-link]")];
 const linkedinLink = document.querySelector("#linkedin-link");
-
-let currentProjectIndex = 0;
-let pointerStartX = null;
-
+const baseTitle = "Joseph Borri — Data Analyst & Visualization Specialist";
 const sectionLabels = {
   projects: "Projects",
   art: "Art",
@@ -217,64 +157,52 @@ const sectionLabels = {
   about: "About"
 };
 
-function selectAll(selector) {
-  return [...document.querySelectorAll(selector)];
-}
+let activeProjectIndex = 0;
 
 function setText(selector, value) {
   const element = document.querySelector(selector);
   if (element) element.textContent = value;
 }
 
-function renderProject() {
-  const project = portfolioData.projects[currentProjectIndex];
-  const previous = portfolioData.projects[(currentProjectIndex - 1 + portfolioData.projects.length) % portfolioData.projects.length];
-  const next = portfolioData.projects[(currentProjectIndex + 1) % portfolioData.projects.length];
-
-  setText("[data-project-number]", project.number);
-  setText("[data-project-control-number]", project.number);
-  setText("[data-project-title]", project.title);
-  setText("[data-project-question]", project.question);
-  setText("[data-project-tools]", project.toolsLine);
-  setText("[data-previous-number]", previous.number);
-  setText("[data-previous-title]", previous.shortTitle);
-  setText("[data-next-number]", next.number);
-  setText("[data-next-title]", next.shortTitle);
-
-  const openLink = document.querySelector("[data-project-open]");
-  openLink.href = `#project/${project.id}`;
-  openLink.setAttribute("aria-label", `View ${project.title}`);
-  projectOrb.setAttribute("aria-label", `${project.title}. ${project.question}`);
+function findProjectIndex(id) {
+  return portfolioData.projects.findIndex((project) => project.id === id);
 }
 
-function changeProject(direction) {
-  const className = direction === "next" ? "is-changing-next" : "is-changing-previous";
-  currentProjectIndex = direction === "next"
-    ? (currentProjectIndex + 1) % portfolioData.projects.length
-    : (currentProjectIndex - 1 + portfolioData.projects.length) % portfolioData.projects.length;
+function setLensState(index, pulse = false) {
+  const project = portfolioData.projects[index];
+  const state = lensStates[index];
+  if (!project || !state) return;
 
-  projectOrb.classList.remove("is-changing-next", "is-changing-previous");
-  void projectOrb.offsetWidth;
-  projectOrb.classList.add(className);
-  renderProject();
+  lens.style.setProperty("--focus-x", state.x);
+  lens.style.setProperty("--focus-y", state.y);
+  lens.style.setProperty("--focus-glow", state.glow);
+  lens.style.setProperty("--drift-x", state.driftX);
+  lens.style.setProperty("--drift-y", state.driftY);
+  setText("[data-lens-number]", project.number);
+  setText("[data-lens-title]", project.title);
+
+  if (pulse) {
+    lens.classList.remove("is-refracting");
+    void lens.offsetWidth;
+    lens.classList.add("is-refracting");
+  }
 }
 
-function findProject(id) {
-  return portfolioData.indexProjects.find((project) => project.id === id)
-    || portfolioData.projects.find((project) => project.id === id)
-    || null;
-}
+function renderProject(index, { updateTitle = true } = {}) {
+  const project = portfolioData.projects[index];
+  if (!project) return;
+  activeProjectIndex = index;
 
-function renderProjectDetail(project) {
-  setText("[data-detail-track]", project.resumeTracks);
-  setText("[data-detail-title]", project.title);
-  setText("[data-detail-question]", project.question);
-  setText("[data-detail-overview]", project.overview);
-  setText("[data-detail-approach]", project.approach);
-  setText("[data-detail-output]", project.output);
-  setText("[data-detail-limitations]", project.limitations);
+  setText("[data-preview-number]", project.number);
+  setText("[data-preview-discipline]", project.discipline);
+  setText("[data-preview-title]", project.title);
+  setText("[data-preview-question]", project.question);
+  setText("[data-preview-overview]", project.overview);
+  setText("[data-preview-approach]", project.approach);
+  setText("[data-preview-output]", project.output);
+  setText("[data-preview-limitations]", project.limitations);
 
-  const tagContainer = document.querySelector("[data-detail-tags]");
+  const tagContainer = document.querySelector("[data-preview-tags]");
   tagContainer.replaceChildren();
   project.tags.forEach((tag) => {
     const tagElement = document.createElement("span");
@@ -282,7 +210,7 @@ function renderProjectDetail(project) {
     tagContainer.append(tagElement);
   });
 
-  const liveLink = document.querySelector("[data-detail-live]");
+  const liveLink = document.querySelector("[data-preview-live]");
   if (project.liveUrl) {
     liveLink.href = project.liveUrl;
     liveLink.hidden = false;
@@ -291,96 +219,116 @@ function renderProjectDetail(project) {
     liveLink.removeAttribute("href");
   }
 
-  const repositoryLink = document.querySelector("[data-detail-repository]");
+  const repositoryLink = document.querySelector("[data-preview-repository]");
   repositoryLink.href = project.repositoryUrl;
-}
 
-function parseRoute() {
-  const rawHash = window.location.hash.replace(/^#/, "");
-  if (!rawHash) return { view: "projects", project: null };
-
-  if (rawHash.startsWith("project/")) {
-    const projectId = decodeURIComponent(rawHash.slice("project/".length));
-    return { view: "project-detail", project: findProject(projectId) };
-  }
-
-  if (sectionLabels[rawHash]) return { view: rawHash, project: null };
-  return { view: "projects", project: null };
-}
-
-function renderRoute() {
-  const route = parseRoute();
-  const validProjectRoute = route.view === "project-detail" && route.project;
-  const activeView = validProjectRoute ? "project-detail" : route.view === "project-detail" ? "projects" : route.view;
-
-  views.forEach((view) => {
-    view.hidden = view.dataset.view !== activeView;
-  });
-
-  const activeNavRoute = activeView === "project-detail" ? "projects" : activeView;
-  routeLinks.forEach((link) => {
-    if (link.dataset.routeLink === activeNavRoute) {
-      link.setAttribute("aria-current", "page");
+  document.querySelectorAll("[data-project-id]").forEach((link) => {
+    if (link.dataset.projectId === project.id) {
+      link.setAttribute("aria-current", "true");
     } else {
       link.removeAttribute("aria-current");
     }
   });
 
-  if (validProjectRoute) {
-    renderProjectDetail(route.project);
-    sectionReadout.textContent = route.project.title;
-    document.title = `${route.project.title} — Joseph Borri`;
-  } else {
-    sectionReadout.textContent = sectionLabels[activeView];
-    document.title = activeView === "projects"
-      ? "Joseph Borri — Data Analyst & Visualization Specialist"
-      : `${sectionLabels[activeView]} — Joseph Borri`;
-  }
-
-  if (projectIndexDialog.open) projectIndexDialog.close();
-  window.scrollTo({ top: 0, behavior: "auto" });
+  setLensState(index, true);
+  if (updateTitle) document.title = `${project.title} — Joseph Borri`;
 }
 
-function createEmptyCollection(label, description) {
+function selectProject(index, { updateHistory = true, scrollPreview = false } = {}) {
+  const project = portfolioData.projects[index];
+  if (!project) return;
+
+  if (updateHistory) history.pushState(null, "", `#project/${project.id}`);
+  renderProject(index);
+  updateCurrentSection("projects");
+
+  if (scrollPreview) {
+    const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    projectPreview.scrollIntoView({ behavior, block: "start" });
+  }
+}
+
+function buildProjectList() {
+  projectList.replaceChildren();
+
+  portfolioData.projects.forEach((project, index) => {
+    const link = document.createElement("a");
+    link.className = "project-row";
+    link.href = `#project/${project.id}`;
+    link.dataset.projectId = project.id;
+
+    const number = document.createElement("span");
+    number.className = "project-row-number";
+    number.textContent = project.number;
+
+    const copy = document.createElement("span");
+    copy.className = "project-row-copy";
+
+    const title = document.createElement("strong");
+    title.textContent = project.title;
+
+    const tools = document.createElement("small");
+    tools.textContent = project.toolsLine;
+
+    const discipline = document.createElement("span");
+    discipline.className = "project-row-discipline";
+    discipline.textContent = project.discipline;
+
+    copy.append(title, tools);
+    link.append(number, copy, discipline);
+    projectList.append(link);
+
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const isNarrow = window.matchMedia("(max-width: 900px)").matches;
+      selectProject(index, { updateHistory: true, scrollPreview: isNarrow });
+    });
+
+    link.addEventListener("pointerenter", () => setLensState(index));
+    link.addEventListener("pointerleave", () => setLensState(activeProjectIndex));
+    link.addEventListener("focus", () => setLensState(index));
+    link.addEventListener("blur", () => setLensState(activeProjectIndex));
+  });
+}
+
+function createEmptyArchive(title, description) {
   const wrapper = document.createElement("div");
-  wrapper.className = "empty-collection";
+  wrapper.className = "empty-archive";
 
-  const content = document.createElement("div");
-  const eyebrow = document.createElement("span");
-  const heading = document.createElement("h2");
+  const label = document.createElement("span");
+  label.textContent = "Archive";
+
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+
   const paragraph = document.createElement("p");
-
-  eyebrow.textContent = "Collection in progress";
-  heading.textContent = label;
   paragraph.textContent = description;
 
-  content.append(eyebrow, heading, paragraph);
-  wrapper.append(content);
+  wrapper.append(label, heading, paragraph);
   return wrapper;
 }
 
-function renderVisualCollection(collectionName, containerSelector, emptyLabel, emptyDescription) {
+function renderVisualCollection(collectionName, containerSelector, emptyTitle, emptyDescription) {
   const container = document.querySelector(containerSelector);
   const items = portfolioData.collections[collectionName];
   container.replaceChildren();
 
   if (!items.length) {
-    container.classList.remove("collection-grid", "photography-grid");
-    container.append(createEmptyCollection(emptyLabel, emptyDescription));
+    container.append(createEmptyArchive(emptyTitle, emptyDescription));
     return;
   }
 
-  container.classList.add("collection-grid");
+  container.classList.add("archive-grid");
   items.forEach((item) => {
     const article = document.createElement("article");
-    article.className = "collection-item";
+    article.className = "archive-item";
 
     const image = document.createElement("img");
     image.src = item.image;
     image.alt = item.alt || "";
     image.loading = "lazy";
 
-    const heading = document.createElement("h2");
+    const heading = document.createElement("h3");
     heading.textContent = item.title;
 
     const description = document.createElement("p");
@@ -397,12 +345,12 @@ function renderWritingCollection() {
   container.replaceChildren();
 
   if (!items.length) {
-    container.classList.remove("writing-list");
-    container.append(createEmptyCollection("Writing archive", "Essays, notes, and poetry will be collected here."));
+    container.append(createEmptyArchive("Writing archive", "Essays, notes, and poetry are being prepared for publication."));
     return;
   }
 
-  container.classList.add("writing-list");
+  const list = document.createElement("div");
+  list.className = "writing-list";
   items.forEach((item) => {
     const article = document.createElement("article");
     article.className = "writing-item";
@@ -411,122 +359,101 @@ function renderWritingCollection() {
     date.dateTime = item.date;
     date.textContent = item.displayDate;
 
-    const copy = document.createElement("div");
-    const heading = document.createElement("h2");
-    const description = document.createElement("p");
+    const heading = document.createElement("h3");
     heading.textContent = item.title;
+
+    const description = document.createElement("p");
     description.textContent = item.description || "";
-    copy.append(heading, description);
 
     const link = document.createElement("a");
-    link.className = "text-link";
     link.href = item.url;
     link.textContent = "Read ↗";
 
-    article.append(date, copy, link);
-    container.append(article);
+    article.append(date, heading, description, link);
+    list.append(article);
+  });
+  container.append(list);
+}
+
+function getProjectFromHash() {
+  const hash = window.location.hash.replace(/^#/, "");
+  if (!hash.startsWith("project/")) return -1;
+  return findProjectIndex(decodeURIComponent(hash.slice("project/".length)));
+}
+
+function applyHashRoute({ initial = false } = {}) {
+  const projectIndex = getProjectFromHash();
+  if (projectIndex >= 0) {
+    renderProject(projectIndex);
+    if (initial) {
+      requestAnimationFrame(() => document.querySelector("#projects").scrollIntoView({ behavior: "auto" }));
+    }
+    return;
+  }
+
+  if (!window.location.hash || window.location.hash === "#projects") {
+    renderProject(activeProjectIndex, { updateTitle: false });
+    updateCurrentSection("projects");
+    document.title = baseTitle;
+    return;
+  }
+
+  const sectionId = window.location.hash.slice(1);
+  if (sectionLabels[sectionId]) {
+    updateCurrentSection(sectionId);
+    document.title = `${sectionLabels[sectionId]} — Joseph Borri`;
+  }
+}
+
+function updateCurrentSection(sectionId) {
+  sectionReadout.textContent = sectionLabels[sectionId] || "Projects";
+
+  sectionLinks.forEach((link) => {
+    if (link.dataset.sectionLink === sectionId) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
   });
 }
 
-function buildProjectIndex() {
-  indexList.replaceChildren();
-  portfolioData.indexProjects.forEach((project) => {
-    const link = document.createElement("a");
-    link.className = "project-index-item";
-    link.href = `#project/${project.id}`;
+function observeSections() {
+  const sections = [...document.querySelectorAll(".dossier-section")];
+  if (!("IntersectionObserver" in window)) return;
 
-    const number = document.createElement("span");
-    number.textContent = project.number;
-
-    const title = document.createElement("strong");
-    title.textContent = project.title;
-
-    const metadata = document.createElement("span");
-    metadata.className = "project-index-meta";
-
-    const tracks = document.createElement("small");
-    tracks.textContent = project.resumeTracks;
-
-    const tools = document.createElement("small");
-    tools.textContent = project.toolsLine;
-
-    metadata.append(tracks, tools);
-    link.append(number, title, metadata);
-    indexList.append(link);
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) updateCurrentSection(visible.target.id);
+  }, {
+    rootMargin: "-22% 0px -58% 0px",
+    threshold: [0.05, 0.2, 0.45]
   });
+
+  sections.forEach((section) => observer.observe(section));
 }
-
-selectAll("[data-project-direction]").forEach((button) => {
-  button.addEventListener("click", () => changeProject(button.dataset.projectDirection));
-});
-
-projectOrb.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowRight") {
-    event.preventDefault();
-    changeProject("next");
-  }
-  if (event.key === "ArrowLeft") {
-    event.preventDefault();
-    changeProject("previous");
-  }
-  if (event.key === "Enter") {
-    window.location.hash = `project/${portfolioData.projects[currentProjectIndex].id}`;
-  }
-});
-
-projectOrb.addEventListener("pointerdown", (event) => {
-  if (event.target.closest("a, button")) return;
-  pointerStartX = event.clientX;
-  projectOrb.setPointerCapture?.(event.pointerId);
-});
-
-projectOrb.addEventListener("pointerup", (event) => {
-  if (pointerStartX === null) return;
-  const distance = event.clientX - pointerStartX;
-  pointerStartX = null;
-  if (Math.abs(distance) < 48) return;
-  changeProject(distance < 0 ? "next" : "previous");
-});
-
-projectOrb.addEventListener("pointercancel", () => {
-  pointerStartX = null;
-});
-
-indexTrigger.addEventListener("click", () => {
-  if (typeof projectIndexDialog.showModal === "function") {
-    projectIndexDialog.showModal();
-  } else {
-    projectIndexDialog.setAttribute("open", "");
-  }
-});
-
-document.querySelector("[data-close-index]").addEventListener("click", () => {
-  if (typeof projectIndexDialog.close === "function") {
-    projectIndexDialog.close();
-  } else {
-    projectIndexDialog.removeAttribute("open");
-  }
-});
-
-projectIndexDialog.addEventListener("click", (event) => {
-  if (event.target === projectIndexDialog) projectIndexDialog.close();
-});
 
 if (portfolioData.profile.linkedinUrl) {
   linkedinLink.href = portfolioData.profile.linkedinUrl;
   linkedinLink.hidden = false;
 }
 
-renderVisualCollection("art", "#art-collection", "Art portfolio", "Finished pieces, titles, media, and dates will be collected here.");
+buildProjectList();
+renderVisualCollection("art", "#art-collection", "Art portfolio", "Selected pieces are being prepared for publication.");
 renderWritingCollection();
-renderVisualCollection("photography", "#photography-collection", "Photography archive", "Selected photographs and visual studies will be collected here.");
-buildProjectIndex();
-renderProject();
+renderVisualCollection("photography", "#photography-collection", "Photography archive", "Selected photographs are being prepared for publication.");
+renderProject(0, { updateTitle: false });
+applyHashRoute({ initial: true });
+observeSections();
 
-window.addEventListener("hashchange", renderRoute);
+window.addEventListener("popstate", () => applyHashRoute());
+window.addEventListener("hashchange", () => applyHashRoute());
 
-if (!window.location.hash) {
-  history.replaceState(null, "", "#projects");
-}
-
-renderRoute();
+sectionLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const sectionId = link.dataset.sectionLink;
+    updateCurrentSection(sectionId);
+    document.title = sectionId === "projects" ? baseTitle : `${sectionLabels[sectionId]} — Joseph Borri`;
+  });
+});
