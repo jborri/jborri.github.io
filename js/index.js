@@ -244,7 +244,10 @@ function selectProject(index, { updateHistory = true, scrollPreview = false } = 
 
   if (scrollPreview) {
     const behavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
-    projectPreview.scrollIntoView({ behavior, block: "start" });
+    const scrollTarget = window.matchMedia("(max-width: 900px)").matches
+      ? projectPreview
+      : document.querySelector(".project-workbench");
+    scrollTarget.scrollIntoView({ behavior, block: "start" });
   }
 }
 
