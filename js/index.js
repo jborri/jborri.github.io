@@ -340,6 +340,7 @@ projectOrb.addEventListener("keydown", (event) => {
 });
 
 projectOrb.addEventListener("pointerdown", (event) => {
+  if (event.target.closest("a, button")) return;
   pointerStartX = event.clientX;
   projectOrb.setPointerCapture?.(event.pointerId);
 });
