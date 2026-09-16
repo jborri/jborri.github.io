@@ -907,6 +907,13 @@ a[href],
   letter-spacing: -0.05em;
 }
 
+.dialog-summary {
+  max-width: 520px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .dialog-header button {
   width: 44px;
   height: 44px;
@@ -946,9 +953,23 @@ a[href],
   font-weight: 400;
 }
 
+.project-index-meta {
+  display: grid;
+  gap: 5px;
+  justify-items: end;
+  text-align: right;
+}
+
 .project-index-item small {
   color: var(--muted);
   font-size: 0.72rem;
+}
+
+.project-index-meta small:first-child {
+  color: var(--green-bright);
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
 .dialog-links {
@@ -1167,8 +1188,10 @@ a[href],
     grid-template-columns: 34px 1fr;
   }
 
-  .project-index-item small {
+  .project-index-meta {
     grid-column: 2;
+    justify-items: start;
+    text-align: left;
   }
 }
 
