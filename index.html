@@ -1,134 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="16x16">
-    <title>Joe Borri</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <style>
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100a">
+  <meta name="description" content="Joseph Borri is a data analyst and visualization specialist working across operational, public-interest, and biological data.">
+  <title>Joseph Borri — Data Analyst &amp; Visualization Specialist</title>
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js" defer></script>
 </head>
 <body>
-    <div id="caustics-canvas"></div>
-    
-    <aside class="sidebar">
-        <div class="logo-image"><img src="images//logov1.png" alt="logo" height="100px" width="100px">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="ambient-field" aria-hidden="true">
+    <span class="ambient-glow ambient-glow-one"></span>
+    <span class="ambient-glow ambient-glow-two"></span>
+  </div>
+
+  <header class="hud identity-hud">
+    <a class="identity-link" href="#projects" data-route-link="projects" aria-label="Joseph Borri, home">
+      <span class="identity-name">Joseph Borri</span>
+      <span class="identity-role">Data Analyst + Visualization Specialist</span>
+    </a>
+  </header>
+
+  <div class="hud section-readout" aria-live="polite">
+    <span class="hud-label">Current section</span>
+    <span id="current-section">Projects</span>
+  </div>
+
+  <nav class="hud utility-nav" aria-label="Profile links">
+    <a href="images/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+    <a href="https://github.com/jborri" target="_blank" rel="noreferrer">GitHub</a>
+    <a id="linkedin-link" href="#" target="_blank" rel="noreferrer" hidden>LinkedIn</a>
+  </nav>
+
+  <nav class="hud section-nav" aria-label="Portfolio sections">
+    <a href="#projects" data-route-link="projects"><span>01</span> Projects</a>
+    <a href="#art" data-route-link="art"><span>02</span> Art</a>
+    <a href="#writing" data-route-link="writing"><span>03</span> Writing</a>
+    <a href="#photography" data-route-link="photography"><span>04</span> Photography</a>
+    <a href="#about" data-route-link="about"><span>05</span> About</a>
+  </nav>
+
+  <main id="main-content">
+    <section class="view projects-view" id="projects" data-view="projects" aria-labelledby="projects-heading">
+      <h1 class="sr-only" id="projects-heading">Selected data projects</h1>
+
+      <div class="orb-stage">
+        <div class="orb-shell">
+          <div class="orb-aura" aria-hidden="true"></div>
+          <div
+            class="project-orb"
+            id="project-orb"
+            role="group"
+            aria-roledescription="project carousel"
+            aria-describedby="orb-instructions"
+            tabindex="0"
+          >
+            <div class="orb-refraction orb-refraction-one" aria-hidden="true"></div>
+            <div class="orb-refraction orb-refraction-two" aria-hidden="true"></div>
+            <div class="orb-caustic" aria-hidden="true"></div>
+            <span class="orb-bubble orb-bubble-one" aria-hidden="true"></span>
+            <span class="orb-bubble orb-bubble-two" aria-hidden="true"></span>
+
+            <div class="orb-ghost orb-ghost-previous" aria-hidden="true">
+              <span data-previous-number>04</span>
+              <strong data-previous-title>Bestseller Trends</strong>
+            </div>
+
+            <article class="orb-content" aria-live="polite">
+              <span class="project-number">Project <b data-project-number>01</b></span>
+              <h2 data-project-title>Interactive Data Visualization</h2>
+              <p data-project-question>How can multiple public datasets become clear, explorable visual stories?</p>
+              <span class="project-tools" data-project-tools>Observable · D3 · Geospatial data</span>
+              <a class="project-open" data-project-open href="#project/interactive-data-visualization">View project <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <div class="orb-ghost orb-ghost-next" aria-hidden="true">
+              <span data-next-number>02</span>
+              <strong data-next-title>Community Indicators</strong>
+            </div>
+          </div>
+          <div class="orb-shadow" aria-hidden="true"></div>
+          <p class="orb-instructions" id="orb-instructions">Use the arrows, keyboard, or a horizontal drag to browse.</p>
         </div>
-        <div class="logo">J O E B O R R I</div>
-        
-        <nav>
-            <div class="nav-section">
-                <div class="nav-title"><a href="#" id="about">ABOUT</a></div>
-                <div class="nav-content">
-                    <p>Designer / developer based in [Brooklyn].</p>
-                    <br>
-                    <!-- <p>Brief description in your own words about your work and interests.</p> -->
-                </div>
-            </div>
-            
-            <div class="nav-section">
-                <div class="nav-title">WORKS</div>
-                <div class="nav-content">
-                    <ul>
-                        <li><a href="#" id="lotus">Project One</a></li>
-                        <li><a href="#" id="artwork">Artwork</a></li>
-                        <li><a href="#" id="poetry">Poetry</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="nav-section">
-                <div class="nav-title">LINKS</div>
-                <div class="nav-content">
-                    <a href="#" id="resume">Resume</a><br>
-                    <a href="#">Github<sup>&#8663;</sup></a><br>
-                    <a href="#">LinkedIn<sup>&#8663;</sup></a><br>
-                </div>
-            </div>
-            
-            <div class="nav-section">
-                <div class="nav-title">CONTACT</div>
-                <div class="nav-content">
-                    <a href="mailto:your@email.com">✉</a>
-                </div>
-            </div>
-        </nav>
-    </aside>
-    
-    <main class="main-content">
+      </div>
 
-        <div class="glass-panel" id="about-modal">
-            <h2 class="project-title">Hi, I'm Joe</h2>
-            <a href="#" id="close-about">&times;</a>
+      <div class="hud project-controls" aria-label="Project carousel controls">
+        <button type="button" data-project-direction="previous" aria-label="Previous project">←</button>
+        <span><b data-project-control-number>01</b> / 04</span>
+        <button type="button" data-project-direction="next" aria-label="Next project">→</button>
+      </div>
 
-            
-            <div class="project-status">Data Analyst</div>
-            
-            
-            <div class="project-link">
-                <a href="#">Link Name</a>
-            </div>
-            
-            <div class="project-description">
-                <p><em>A few days ago, something happened.</em></p>
-                <p><em>I set out on a journey.</em></p>
-                <p><em>To find what I saw.</em></p>
-            </div>
-            
-            <div class="project-description">
-                <p>A longer description of your project. Explain the concept, the story, or the purpose behind the work. This section can contain multiple paragraphs to fully describe your creative vision.</p>
-            </div>
-            
-            <div class="project-description">
-                <p>Additional context or details in another language if needed.</p>
-            </div>
+      <button class="hud index-trigger" type="button" data-open-index aria-haspopup="dialog">
+        <span aria-hidden="true">⠿</span>
+        Project index
+      </button>
+    </section>
+
+    <section class="view content-view" id="art" data-view="art" aria-labelledby="art-heading" hidden>
+      <header class="content-header">
+        <span class="section-number">02</span>
+        <h1 id="art-heading">Art</h1>
+        <p>Selected visual work.</p>
+      </header>
+      <div class="collection-grid" id="art-collection" aria-live="polite"></div>
+    </section>
+
+    <section class="view content-view" id="writing" data-view="writing" aria-labelledby="writing-heading" hidden>
+      <header class="content-header">
+        <span class="section-number">03</span>
+        <h1 id="writing-heading">Writing</h1>
+        <p>Essays, notes, and poetry.</p>
+      </header>
+      <div class="writing-list" id="writing-collection" aria-live="polite"></div>
+    </section>
+
+    <section class="view content-view" id="photography" data-view="photography" aria-labelledby="photography-heading" hidden>
+      <header class="content-header">
+        <span class="section-number">04</span>
+        <h1 id="photography-heading">Photography</h1>
+        <p>Selected photographs and visual studies.</p>
+      </header>
+      <div class="collection-grid photography-grid" id="photography-collection" aria-live="polite"></div>
+    </section>
+
+    <section class="view content-view about-view" id="about" data-view="about" aria-labelledby="about-heading" hidden>
+      <header class="content-header">
+        <span class="section-number">05</span>
+        <h1 id="about-heading">About</h1>
+      </header>
+
+      <div class="about-layout">
+        <div class="about-introduction">
+          <p class="lead">I’m a data analyst and visualization specialist with a background in biological sciences.</p>
+          <p>I work across operational, campaign, public-interest, and research data—building analyses, dashboards, and interactive visual stories that make complex information easier to examine and communicate.</p>
+          <div class="about-actions">
+            <a class="text-link" href="images/resume.pdf" target="_blank" rel="noreferrer">Open resume ↗</a>
+            <a class="text-link" href="mailto:borrij09@gmail.com">Email ↗</a>
+          </div>
         </div>
 
-
-        <div class="image-grid hidden" id="artwork-modal">
-            <div class="image-placeholder">Image 1</div>
-            <div class="image-placeholder">Image 2</div>
-            <div class="image-placeholder">Image 3</div>
-            <div class="image-placeholder">Image 4</div>
-            <div class="image-placeholder">Image 5</div>
-            <div class="image-placeholder">Image 6</div>
+        <div class="about-details">
+          <section>
+            <span class="detail-label">Current</span>
+            <h2>Data Insights Analyst</h2>
+            <p>Sanky Inc. · New York, NY</p>
+          </section>
+          <section>
+            <span class="detail-label">Graduate study</span>
+            <h2>MS, Data Analysis and Visualization</h2>
+            <p>CUNY Graduate Center · 2026</p>
+          </section>
+          <section>
+            <span class="detail-label">Foundation</span>
+            <h2>BS, Biological Sciences</h2>
+            <p>University of New Orleans · Minor in Computer Science</p>
+          </section>
         </div>
-        
-        <div class="glass-panel hidden" id="lotus-modal">
-            <h2 class="project-title">Project Title</h2>
-            <a href="#" id="close-lotus">&times;</a>
+      </div>
+    </section>
 
-            
-            <div class="project-status">WIP</div>
-            
-            
-            <div class="project-link">
-                <a href="#">Link Name</a>
-            </div>
-            
-            <div class="project-description">
-                <p><em>A few days ago, something happened.</em></p>
-                <p><em>I set out on a journey.</em></p>
-                <p><em>To find what I saw.</em></p>
-            </div>
-            
-            <div class="project-description">
-                <p>A longer description of your project. Explain the concept, the story, or the purpose behind the work. This section can contain multiple paragraphs to fully describe your creative vision.</p>
-            </div>
-            
-            <div class="project-description">
-                <p>Additional context or details in another language if needed.</p>
-            </div>
+    <section class="view project-detail-view" id="project-detail" data-view="project-detail" aria-labelledby="detail-title" hidden>
+      <div class="detail-topline">
+        <a href="#projects" class="detail-back">← Back to projects</a>
+        <span>Project <b data-detail-number>01</b> / 04</span>
+      </div>
+
+      <article class="project-detail">
+        <span class="section-number">Selected project</span>
+        <h1 id="detail-title" data-detail-title>Interactive Data Visualization</h1>
+        <p class="detail-question" data-detail-question>How can multiple public datasets become clear, explorable visual stories?</p>
+
+        <div class="detail-tags" data-detail-tags aria-label="Project tools"></div>
+
+        <div class="detail-grid">
+          <section>
+            <span>01</span>
+            <h2>Overview</h2>
+            <p data-detail-overview></p>
+          </section>
+          <section>
+            <span>02</span>
+            <h2>Approach</h2>
+            <p data-detail-approach></p>
+          </section>
+          <section>
+            <span>03</span>
+            <h2>Output</h2>
+            <p data-detail-output></p>
+          </section>
+          <section>
+            <span>04</span>
+            <h2>Limitations</h2>
+            <p data-detail-limitations></p>
+          </section>
         </div>
-        <div class="hidden" id="resume-modal"><embed src="images/resume.pdf" type="application/pdf" width="100%" height="500px" /></div>
-        
 
-    </main>
+        <div class="detail-links">
+          <a class="detail-link" data-detail-live href="#" target="_blank" rel="noreferrer">View live project ↗</a>
+          <a class="detail-link" data-detail-repository href="#" target="_blank" rel="noreferrer">View repository ↗</a>
+        </div>
+      </article>
+    </section>
+  </main>
 
-    <script>
-    </script>
-    <script src="js/index.js"></script>
+  <a class="mobile-resume-link" href="images/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+
+  <nav class="mobile-dock" aria-label="Mobile navigation">
+    <a href="#projects" data-route-link="projects">Projects</a>
+    <a href="#art" data-route-link="art">Art</a>
+    <a href="#writing" data-route-link="writing">Writing</a>
+    <a href="#photography" data-route-link="photography">Photos</a>
+    <a href="#about" data-route-link="about">About</a>
+  </nav>
+
+  <dialog class="project-index-dialog" id="project-index-dialog" aria-labelledby="project-index-heading">
+    <div class="dialog-header">
+      <div>
+        <span class="hud-label">All work</span>
+        <h2 id="project-index-heading">Project index</h2>
+      </div>
+      <button type="button" data-close-index aria-label="Close project index">×</button>
+    </div>
+    <div class="project-index-list" data-project-index-list></div>
+    <div class="dialog-links">
+      <a href="images/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <a href="https://github.com/jborri" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </dialog>
+
+  <noscript>
+    <p class="noscript-message">JavaScript is required for project navigation. The resume and GitHub profile remain available from the links above.</p>
+  </noscript>
 </body>
 </html>
