@@ -283,8 +283,6 @@ function buildProjectList() {
       selectProject(index, { updateHistory: true, scrollPreview: true });
     });
 
-    link.addEventListener("pointerenter", () => setLensState(index));
-    link.addEventListener("pointerleave", () => setLensState(activeProjectIndex));
     link.addEventListener("focus", () => setLensState(index));
     link.addEventListener("blur", () => setLensState(activeProjectIndex));
   });
