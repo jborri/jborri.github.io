@@ -310,6 +310,7 @@ function createEmptyArchive(title, description) {
 
 function renderVisualCollection(collectionName, containerSelector, emptyTitle, emptyDescription) {
   const container = document.querySelector(containerSelector);
+  if (!container) return;
   const items = portfolioData.collections[collectionName];
   container.replaceChildren();
 
@@ -341,6 +342,7 @@ function renderVisualCollection(collectionName, containerSelector, emptyTitle, e
 
 function renderWritingCollection() {
   const container = document.querySelector("#writing-collection");
+  if (!container) return;
   const items = portfolioData.collections.writing;
   container.replaceChildren();
 
