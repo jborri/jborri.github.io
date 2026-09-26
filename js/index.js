@@ -4,8 +4,23 @@ const portfolioData = {
   },
   projects: [
     {
-      id: "mayoral-mystery",
+      id: "comfort-mismatch",
       number: "01",
+      title: "Comfort Mismatch",
+      discipline: "Data Analysis · Computational Science",
+      question: "How well do wearable comfort predictions carry across different participants?",
+      toolsLine: "R · Mixed models · Validation",
+      tags: ["R", "Wearable sensors", "Mixed-effects models", "Calibration", "Participant-grouped validation"],
+      overview: "An exploratory analysis of near-body sensor measurements and self-reported comfort across 19 participants.",
+      approach: "Compared fixed and participant-specific logistic models, then evaluated calibration, classification thresholds, and performance on held-out participants.",
+      output: "R analysis scripts, aggregate results, and figures documenting where prediction depends on participant familiarity.",
+      limitations: "The study has 613 observations and 90 not-comfy reports. Held-out participant performance is weaker; some grouped mixed-model fits had convergence warnings. The public repository omits participant-level data.",
+      liveUrl: null,
+      repositoryUrl: "https://github.com/jborri/comfort-mismatch"
+    },
+    {
+      id: "mayoral-mystery",
+      number: "02",
       title: "Mayoral Mystery",
       discipline: "Data Visualization",
       question: "What do election results, survey responses, campaign events, and district geography suggest about a future NYC campaign?",
@@ -20,7 +35,7 @@ const portfolioData = {
     },
     {
       id: "clearwater-crisis",
-      number: "02",
+      number: "03",
       title: "Clearwater Crisis",
       discipline: "Data Visualization",
       question: "What does the temporal and spatial evidence suggest about a fictional ecological decline?",
@@ -35,7 +50,7 @@ const portfolioData = {
     },
     {
       id: "subway-staffing",
-      number: "03",
+      number: "04",
       title: "Subway Staffing",
       discipline: "Data Visualization",
       question: "Which stations should receive additional staffing for upcoming events?",
@@ -50,7 +65,7 @@ const portfolioData = {
     },
     {
       id: "prolific-pollinators",
-      number: "04",
+      number: "05",
       title: "Prolific Pollinators",
       discipline: "Data Visualization",
       question: "How do morphology and weather relate to pollinator visits and nectar production?",
@@ -65,7 +80,7 @@ const portfolioData = {
     },
     {
       id: "bestseller-trends-d3",
-      number: "05",
+      number: "06",
       title: "Bestseller Trends with D3",
       discipline: "Data Visualization",
       question: "How have bestseller genres, authorship, page counts, and ratings changed across decades?",
@@ -80,7 +95,7 @@ const portfolioData = {
     },
     {
       id: "community-indicators",
-      number: "06",
+      number: "07",
       title: "Community Indicators",
       discipline: "Data Analysis · Visualization",
       question: "How do social, health, economic, and governance indicators relate to reported social support?",
@@ -95,7 +110,7 @@ const portfolioData = {
     },
     {
       id: "mitochondrial-haplogroup-lookup",
-      number: "07",
+      number: "08",
       title: "Mitochondrial Haplogroup U Lookup",
       discipline: "Computational Biology",
       question: "How can an entered mutation set be matched against defining PhyloTree haplogroup U mutations?",
@@ -110,7 +125,7 @@ const portfolioData = {
     },
     {
       id: "ins-variant-classification",
-      number: "08",
+      number: "09",
       title: "Human INS Variant Classification",
       discipline: "Computational Biology",
       question: "What can a small set of human insulin variant records support in an exploratory classification workflow?",
@@ -132,6 +147,7 @@ const portfolioData = {
 };
 
 const lensStates = [
+  { x: "49%", y: "48%", glow: "0.36", driftX: "2%", driftY: "-2%" },
   { x: "29%", y: "22%", glow: "0.34", driftX: "-3%", driftY: "2%" },
   { x: "66%", y: "30%", glow: "0.27", driftX: "4%", driftY: "-2%" },
   { x: "42%", y: "72%", glow: "0.31", driftX: "1%", driftY: "4%" },
